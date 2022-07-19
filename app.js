@@ -1,47 +1,35 @@
-// one euro is:
+const fromEuroToDollar = function(valueInEuro){
+    // convertimos el valor a dolares
+    let valueInDollar = valueInEuro * 1.2;
+    // retornamos el valor
+    return valueInDollar;
+}
+
+const fromDollarToYen = function(valueInDollar){
+    let valueInEuro = valueInDollar / 1.2;
+    let valueInYen = valueInEuro * 127.9;
+    return valueInYen;
+
+}
+
+const fromYenToPound = function(valueinYen){
+    let valueInEuro = valueinYen / 127.9;
+    let valueInPound = valueInEuro * 0.8;
+    return valueInPound;
+}
+
 let oneEuroIs = {
     "JPY": 127.9, // japan yen
     "USD": 1.2, // us dollar
     "GBP": 0.8, // british pound
 }
 
-let oneYenIs = {
-    "EUR": 0.00781861,
-    "USD": 0.00938233,
-    "GBP": 0.00625489,
+
+
+const sum = (a,b)=>{
+    return a + b;
 }
 
-let oneDollarIs = {
-    "EUR": 0.8333,
-    "JPY": 106.5833,
-    "GBP": 0.66666667,
-}
+console.log(sum(7,3));
 
-let oneLibraIs = {
-    "EUR":1.25,
-    "JPY":159.874914,
-    "USD":1.49999999,
-}
-
-
-
-
-let fromDollarToYen = function (euros){
-    let totalYen = oneDollarIs ["JPY"] * dollar
-    return totalYen
-}
-console.log(fromDollarToYen());
-
-let fromEuroToDollar = function (euros){
-    let totaldolar = oneEuroIs ["USD"] * euros
-    return totaldolar
-}
-console.log(fromEuroToDollar());
-
-let fromYenToPound = function (yenes){
-    let totalpound = oneYenIs["GBP"] * yenes
-    return totalpound
-}
-console.log(fromYenToPound());
-
-module.exports = {fromEuroToDollar, fromDollarToYen, fromYenToPound}
+module.exports = {sum , fromEuroToDollar, fromDollarToYen, fromYenToPound};
